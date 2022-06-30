@@ -9,21 +9,27 @@
 /* Begin PBXBuildFile section */
 		AD603637286DB03500E2FD2D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD603636286DB03500E2FD2D /* AppDelegate.swift */; };
 		AD603639286DB03500E2FD2D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD603638286DB03500E2FD2D /* SceneDelegate.swift */; };
-		AD60363B286DB03500E2FD2D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD60363A286DB03500E2FD2D /* ViewController.swift */; };
 		AD60363E286DB03500E2FD2D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD60363C286DB03500E2FD2D /* Main.storyboard */; };
 		AD603640286DB03600E2FD2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD60363F286DB03600E2FD2D /* Assets.xcassets */; };
 		AD603643286DB03600E2FD2D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD603641286DB03600E2FD2D /* LaunchScreen.storyboard */; };
+		AD60364B286DB0A600E2FD2D /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD60364A286DB0A600E2FD2D /* TableViewController.swift */; };
+		AD60364D286DB0DA00E2FD2D /* Rate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD60364C286DB0DA00E2FD2D /* Rate.swift */; };
+		AD60364F286DB13A00E2FD2D /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD60364E286DB13A00E2FD2D /* NetworkManager.swift */; };
+		AD603651286E00B700E2FD2D /* CoinCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD603650286E00B700E2FD2D /* CoinCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AD603633286DB03500E2FD2D /* CoinGeckoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoinGeckoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD603636286DB03500E2FD2D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD603638286DB03500E2FD2D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		AD60363A286DB03500E2FD2D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AD60363D286DB03500E2FD2D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AD60363F286DB03600E2FD2D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AD603642286DB03600E2FD2D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AD603644286DB03600E2FD2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD60364A286DB0A600E2FD2D /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		AD60364C286DB0DA00E2FD2D /* Rate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rate.swift; sourceTree = "<group>"; };
+		AD60364E286DB13A00E2FD2D /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		AD603650286E00B700E2FD2D /* CoinCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +62,74 @@
 		AD603635286DB03500E2FD2D /* CoinGeckoApp */ = {
 			isa = PBXGroup;
 			children = (
-				AD603636286DB03500E2FD2D /* AppDelegate.swift */,
-				AD603638286DB03500E2FD2D /* SceneDelegate.swift */,
-				AD60363A286DB03500E2FD2D /* ViewController.swift */,
-				AD60363C286DB03500E2FD2D /* Main.storyboard */,
-				AD60363F286DB03600E2FD2D /* Assets.xcassets */,
-				AD603641286DB03600E2FD2D /* LaunchScreen.storyboard */,
-				AD603644286DB03600E2FD2D /* Info.plist */,
+				AD603653286E32F200E2FD2D /* Models */,
+				AD603654286E32FE00E2FD2D /* Services */,
+				AD603655286E332300E2FD2D /* ViewControllers */,
+				AD603658286E339400E2FD2D /* CustomUI */,
+				AD603652286E32E400E2FD2D /* Storyboards */,
+				AD603657286E335300E2FD2D /* Resources */,
+				AD603656286E333F00E2FD2D /* App */,
 			);
 			path = CoinGeckoApp;
+			sourceTree = "<group>";
+		};
+		AD603652286E32E400E2FD2D /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				AD60363C286DB03500E2FD2D /* Main.storyboard */,
+				AD603641286DB03600E2FD2D /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		AD603653286E32F200E2FD2D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AD60364C286DB0DA00E2FD2D /* Rate.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		AD603654286E32FE00E2FD2D /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				AD60364E286DB13A00E2FD2D /* NetworkManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		AD603655286E332300E2FD2D /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				AD60364A286DB0A600E2FD2D /* TableViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		AD603656286E333F00E2FD2D /* App */ = {
+			isa = PBXGroup;
+			children = (
+				AD603636286DB03500E2FD2D /* AppDelegate.swift */,
+				AD603638286DB03500E2FD2D /* SceneDelegate.swift */,
+				AD603644286DB03600E2FD2D /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		AD603657286E335300E2FD2D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AD60363F286DB03600E2FD2D /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		AD603658286E339400E2FD2D /* CustomUI */ = {
+			isa = PBXGroup;
+			children = (
+				AD603650286E00B700E2FD2D /* CoinCell.swift */,
+			);
+			path = CustomUI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +203,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD60363B286DB03500E2FD2D /* ViewController.swift in Sources */,
 				AD603637286DB03500E2FD2D /* AppDelegate.swift in Sources */,
+				AD60364D286DB0DA00E2FD2D /* Rate.swift in Sources */,
+				AD60364F286DB13A00E2FD2D /* NetworkManager.swift in Sources */,
+				AD603651286E00B700E2FD2D /* CoinCell.swift in Sources */,
+				AD60364B286DB0A600E2FD2D /* TableViewController.swift in Sources */,
 				AD603639286DB03500E2FD2D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -288,7 +356,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = CoinGeckoApp/Info.plist;
+				INFOPLIST_FILE = CoinGeckoApp/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -303,7 +371,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -315,7 +383,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = CoinGeckoApp/Info.plist;
+				INFOPLIST_FILE = CoinGeckoApp/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -330,7 +398,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
