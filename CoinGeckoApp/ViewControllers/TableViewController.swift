@@ -31,7 +31,6 @@ class TableViewController: UITableViewController {
     }
     
     // MARK: - Table view data source
-    
     override func numberOfSections(in tableView: UITableView) -> Int {
         rates.count
     }
@@ -62,14 +61,33 @@ class TableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        
+
+
         var values: [RateValue] = []
-        
+
         for (_, value) in rates {
            values.append(value)
         }
-        
+
         return values[section].name
+    }
+    
+    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        guard let header = view as? UITableViewHeaderFooterView else { return }
+        
+        var values: [RateValue] = []
+      
+              for (_, value) in rates {
+                 values.append(value)
+              }
+
+        var content = header.defaultContentConfiguration()
+
+        content.textProperties.font = UIFont.systemFont(ofSize: 22)
+        content.text = values[section].name
+        content.textProperties.color = .darkText
+        content.textProperties.alignment = .justified
+        header.contentConfiguration = content
     }
 }
 
